@@ -7,11 +7,12 @@ function unseen_files(){
     wp_enqueue_style('university_extra_styles', get_theme_file_uri('/build/index.css'));
 }
 
+add_action('wp_enqueue_scripts', 'unseen_files');
+
 function unseen_features(){
     add_theme_support('title-tag');
 }
 
-add_action('wp_enqueue_scripts', 'unseen_files');
-
 add_action('after_setup_theme', 'unseen_features');
+
 ?>
